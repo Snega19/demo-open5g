@@ -293,7 +293,7 @@ resource "local_file" "open5gs_kp" {
 
 
 # EC2 instance for core
-resource "aws_instance" "core-ec2" {
+resource "aws_instance" "core" {
   ami           = "ami-053b0d53c279acc90"
   instance_type = "t3.medium"
 # vpc_id                      = aws_vpc.Core-vpc.id
@@ -397,7 +397,7 @@ resource "null_resource" "RAN-null-res" {
 
 
 # EC2 instance for Monitoring
-resource "aws_instance" "Monitoring-ec2" {
+resource "aws_instance" "performance" {
   ami           = "ami-053b0d53c279acc90"
   instance_type = "t2.medium"
   # vpc_id                      = aws_vpc.Core-vpc.id
